@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+<bean class="com.cg.a1.Address" name="address1">
+<property name="street" value="radham" />
+<property name="city" value="Markapur" />
+<property name="country" value="India" />
+<property name="state" value="Ap" />
+<property name="zip" value="523316" />
+</bean>
+
+
+
+<bean class="com.cg.a1.Customer" name="customer1">
+<property name="customerName" value="Nayum" />
+<property name="customerId" value="001" />
+<property name="customerContact" value="7730951361" />
+<property name="customerAddress" ref="address1" />
+</bean>
+
+
+
+<bean class="com.cg.a1.Address" name="address2">
+<constructor-arg value="SR Nagar" />
+<constructor-arg value="Hyd" />
+<constructor-arg value="TS" />
+<constructor-arg value="500038" />
+<constructor-arg value="India" />
+</bean>
+
+
+
+<bean class="com.cg.a1.Customer" name="customer2">
+<constructor-arg value="01" />
+<constructor-arg value="Vishwa" />
+<constructor-arg value="9123432131" />
+<constructor-arg ref="address2" />
+</bean>
+
+
+
+</beans>
